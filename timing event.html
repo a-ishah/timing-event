@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Document </title>
+</head>
+<body>
+     <h2> Working With Timing Event</h2>
+     <div id="Timer"></div>
+      <button onclick="startTimer()">start Timer</button> 
+      <button onclick="stopTimer()">stop Timer</button> 
+
+     <script type="text/javascript">
+           let intervalid;
+
+           function startTimer(){
+               intervalid = setInterval(getCurrentDateTime, 1000);
+         }
+           function stopTimer(){
+                clearInterval(intervalid);
+           }
+           function getCurrentDateTime(){
+             document.getElementById("Timer").innerHTML = new Date();
+         }
+         
+             getCurrentDateTime()
+
+     </script> 
+</body>
+</html>
+
